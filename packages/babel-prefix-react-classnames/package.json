@@ -1,0 +1,17 @@
+{
+  "name": "@type_of/babel-prefix-react-classnames",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "Daniel Cortes",
+  "license": "ISC",
+  "packageManager": "pnpm@10.7.0",
+  "devDependencies": {
+    "@babel/helper-plugin-utils": "^7.26.5"
+  }
+}

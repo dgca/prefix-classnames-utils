@@ -1,0 +1,17 @@
+.foo {
+  color: red;
+}
+
+.bar {
+  color: blue;
+}
+
+.baz .qux {
+  color: green;
+}
+
+.joe[data-\\foo="bar"] {
+  .bob {
+    color: red;
+  }
+}

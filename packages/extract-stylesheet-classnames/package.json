@@ -1,0 +1,22 @@
+{
+  "name": "@type_of/extract-stylesheet-classnames",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx ./src/index.ts"
+  },
+  "keywords": [],
+  "author": "Daniel Cortes",
+  "license": "ISC",
+  "packageManager": "pnpm@10.7.0",
+  "devDependencies": {
+    "@babel/helper-plugin-utils": "^7.26.5",
+    "@types/css-tree": "^2.3.10",
+    "@types/node": "^22.13.14",
+    "css-tree": "^3.1.0",
+    "tsx": "^4.19.3"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@type_of/postcss-prefix-classnames",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx ./src/index.ts"
+  },
+  "keywords": [],
+  "author": "Daniel Cortes",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.13.14",
+    "postcss": "^8.5.3"
+  },
+  "packageManager": "pnpm@10.7.0"
+}
