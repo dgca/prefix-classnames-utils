@@ -1,12 +1,12 @@
 {
   "name": "@type_of/extract-stylesheet-classnames",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.0.0",
+  "description": "Extract classNames from a stylesheet",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "dev": "tsx ./src/index.ts"
+    "test": "tsx ./src/test/index.test.ts"
   },
   "keywords": [],
   "author": "Daniel Cortes",

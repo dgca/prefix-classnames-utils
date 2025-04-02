@@ -1,4 +1,4 @@
-import "./index.css";
+import "./styles.css";
 
 export default function App() {
   return (
@@ -128,7 +128,7 @@ export default function App() {
           </div>
           <hr className="my-6 w-full border-(--pattern-fg)" />
           <p className="mb-3">Want to dig deeper into Tailwind?</p>
-          <p className="font-semibold">
+          <p className="font-semibold hover:bg-sky-700">
             <a
               href="https://tailwindcss.com/docs"
               className="text-gray-950 underline decoration-sky-400 underline-offset-3 hover:decoration-2 dark:text-white"

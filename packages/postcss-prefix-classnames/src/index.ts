@@ -6,18 +6,17 @@ export default function postcssPrefixClassnames({
   prefix,
   includeFiles,
   excludeFiles,
-  onSuccess,
 }: {
   prefix: string;
   includeFiles?: FileMatcher;
   excludeFiles?: FileMatcher;
-  onSuccess?: (processedClassnames: string[]) => void;
 }): PostCSS.Plugin {
+  const rawPrefix = prefix.replace(/^(\.)/, "");
+
   return {
     postcssPlugin: "postcss-prefix-classnames",
     prepare(result) {
       const file = result.root.source?.input.file;
-      const processedClassnames: string[] = [];
 
       return {
         Rule(rule) {
@@ -25,16 +24,10 @@ export default function postcssPrefixClassnames({
             return;
 
           rule.selectors = rule.selectors.map((selector) => {
-            if (onSuccess) {
-              processedClassnames.push(...extractClassnames(selector));
-            }
-            return prefixClasses({ selector, prefix });
+            const prefixed = prefixClasses({ selector, prefix: rawPrefix });
+            console.log({ selector, prefixed });
+            return prefixed;
           });
-        },
-        OnceExit() {
-          if (onSuccess) {
-            onSuccess(processedClassnames);
-          }
         },
       };
     },
@@ -48,7 +41,9 @@ function prefixClasses({
   selector: string;
   prefix: string;
 }) {
-  return selector.replace(/\.([^\s])/g, `.${prefix}$1`);
+  return selector.replace(/(^\.)|((?:[^\\])\.)/g, (match) => {
+    return match + prefix;
+  });
 }
 
 function shouldProcessFile({
@@ -78,28 +73,4 @@ function isMatch({
   if (Array.isArray(matcher))
     return matcher.some((m) => isMatch({ file, matcher: m }));
   return false;
-}
-
-function extractClassnames(selector: string): string[] {
-  // Split on commas for multiple selectors
-  const selectorParts = selector.split(",").map((s) => s.trim());
-
-  const classes: string[] = [];
-
-  for (const part of selectorParts) {
-    // Match class names while handling:
-    // - Basic classes (.class)
-    // - Pseudo-classes (.class:hover)
-    // - Combinators (.class > .other, .class.another)
-    // - Escaped characters (.class\.with\.dots)
-    // - Escaped square brackets (.\[foo\])
-    const matches = part.match(/\.(?:[^.\s#:+~>[\]]|\\.|\\\[|\\\])+/g);
-
-    if (matches) {
-      // Remove the leading dot and unescape special characters
-      classes.push(...matches.map((m) => m.slice(1).replace(/\\(.)/g, "$1")));
-    }
-  }
-
-  return Array.from(new Set(classes));
 }

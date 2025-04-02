@@ -1,7 +1,7 @@
 {
   "name": "@type_of/babel-prefix-react-classnames",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.0.0",
+  "description": "Babel plugin to prefix component classNames with a custom prefix",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

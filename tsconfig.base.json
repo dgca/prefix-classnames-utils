@@ -3,12 +3,14 @@
     "lib": ["ESNext"],
     "strict": true,
     "strictNullChecks": true,
-    "esModuleInterop": true,
+    "esModuleInterop": false,
     "skipLibCheck": true,
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
     "jsx": "react-jsx",
     "moduleResolution": "node",
+    "module": "ESNext",
+    "target": "ESNext"
   }
 }

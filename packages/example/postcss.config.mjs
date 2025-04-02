@@ -1,14 +1,13 @@
 import tailwindcss from "@tailwindcss/postcss";
+import postcssImport from "postcss-import";
 import postcssPrefixClassnames from "@type_of/postcss-prefix-classnames";
 
 export default {
   plugins: [
+    postcssImport(),
     tailwindcss(),
     postcssPrefixClassnames({
-      prefix: ".cool-",
-      onSuccess: (classNames) => {
-        console.log(classNames);
-      },
+      prefix: "YEE-",
     }),
   ],
 };

@@ -28,12 +28,5 @@ export function extractStylesheetClassNames({
     );
   }
 
-  console.log(classNames);
-
   return classNames;
 }
-
-extractStylesheetClassNames({
-  filePath: path.resolve(__dirname, "./styles.css"),
-  outDir: path.resolve(__dirname, "../out"),
-});

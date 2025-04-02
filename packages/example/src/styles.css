@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+.foo {
+  color: red;
+}
+
+.foo select .bar {
+  color: blue;
+}
+
+.foo.bar.baz {
+  color: green;
+}
+
+.test,
+.separate {
+  color: orange;
+}

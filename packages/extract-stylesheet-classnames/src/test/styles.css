@@ -10,8 +10,12 @@
   color: green;
 }
 
-.joe[data-\\foo="bar"] {
+.alice[data-foo="bar"] {
   .bob {
     color: red;
   }
+}
+
+.carol\[dave\] {
+  color: red;
 }
