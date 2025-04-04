@@ -3,6 +3,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "release": "pnpm build && changeset publish",
     "f:babel": "pnpm --filter @type_of/babel-prefix-react-classnames",
     "f:postcss": "pnpm --filter @type_of/postcss-prefix-classnames",
     "f:extract": "pnpm --filter @type_of/extract-stylesheet-classnames",
