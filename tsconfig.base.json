@@ -3,7 +3,7 @@
     "lib": ["ESNext"],
     "strict": true,
     "strictNullChecks": true,
-    "esModuleInterop": false,
+    "esModuleInterop": true,
     "skipLibCheck": true,
     "sourceMap": true,
     "declaration": true,

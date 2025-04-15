@@ -1,6 +1,6 @@
 {
   "name": "prefix-classnames-utils",
-  "description": "",
+  "description": "A collection of utilities for prefixing class names in React and CSS",
   "main": "index.js",
   "scripts": {
     "release": "pnpm build && changeset publish",

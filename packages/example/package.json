@@ -2,10 +2,7 @@
   "name": "example",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "build:tsup": "tsup",
-    "styles": "postcss ./src/styles.css -o ./dist/styles.css",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -14,9 +11,10 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@type_of/postcss-prefix-classnames": "workspace:*",
+    "@type_of/babel-prefix-react-classnames": "workspace:*",
     "@eslint/js": "^9.21.0",
     "@tailwindcss/postcss": "^4.0.17",
-    "@type_of/postcss-prefix-classnames": "workspace:*",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
@@ -28,7 +26,6 @@
     "postcss-cli": "^11.0.1",
     "postcss-import": "^16.1.0",
     "tailwindcss": "^4.0.17",
-    "tsup": "^8.4.0",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0"

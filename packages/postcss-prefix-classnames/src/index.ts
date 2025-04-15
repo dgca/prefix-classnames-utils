@@ -24,9 +24,7 @@ export default function postcssPrefixClassnames({
             return;
 
           rule.selectors = rule.selectors.map((selector) => {
-            const prefixed = prefixClasses({ selector, prefix: rawPrefix });
-            console.log({ selector, prefixed });
-            return prefixed;
+            return prefixClasses({ selector, prefix: rawPrefix });
           });
         },
       };

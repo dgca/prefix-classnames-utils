@@ -2,9 +2,9 @@
   "name": "@type_of/postcss-prefix-classnames",
   "version": "0.0.0",
   "description": "PostCSS plugin to prefix class selectors with a custom prefix",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "type": "module",
   "scripts": {
     "build": "tsc",
     "dev": "tsx ./src/index.ts"
